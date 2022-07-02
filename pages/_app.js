@@ -2,13 +2,21 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import "antd/dist/antd.css";
+import { SWRConfig } from "swr";
+import axios from "axios";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <SWRConfig
+        value={{
+          fetcher: (url) => axios.get(url).then((response) => response.data),
+        }}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SWRConfig>
     </>
   );
 }

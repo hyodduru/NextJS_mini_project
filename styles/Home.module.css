@@ -1,16 +1,32 @@
 .home {
   width: 1040px;
   margin: 0 auto;
-}
-
-.card-box {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  margin-top: 120px;
   padding: 0 20px;
 }
 
+.subtitle {
+  display: inline;
+  font-family: "Arima", cursive;
+}
+
+.card-box {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 430px;
+}
+
 .card-wrapper {
-  margin: 10px;
+  width: 180px;
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
+}
+
+@media (max-width: 820px) {
+  .card-box {
+    width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

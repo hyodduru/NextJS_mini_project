@@ -15,7 +15,7 @@ const Header = () => {
           </Link>
         </li>
         <li className={header["menu-item"]}>
-          <Link href="/store">
+          <Link href="/">
             <a className={header["menu-name"]}>STORE</a>
           </Link>
         </li>

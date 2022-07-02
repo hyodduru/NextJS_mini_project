@@ -1,0 +1,11 @@
+.about {
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 0 20px;
+}
+
+.subtitle {
+  display: inline;
+  font-family: "Arima", cursive;
+}
