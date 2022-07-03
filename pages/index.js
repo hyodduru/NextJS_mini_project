@@ -1,10 +1,9 @@
-import Image from "next/image";
-import { BASE_URL } from "../config";
-import { Card } from "antd";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
+import { Card } from "antd";
 import StoreModal from "./storemodal";
 import home from "../styles/home.module.css";
+import { BASE_URL } from "../config";
 
 export default function Home({ stores }) {
   const router = useRouter();
@@ -23,14 +22,13 @@ export default function Home({ stores }) {
       {id && <StoreModal />}
 
       <h1 className={home.subtitle}>STORE</h1>
+      <div className={home.line}></div>
       <div className={home["card-box"]}>
-        {stores?.map(({ id, thumb }) => (
+        {stores.map(({ id, thumb }) => (
           <div
             key={id}
             className={home["card-wrapper"]}
             onClick={() => openModal(id)}
-            href={`/detail/[id]`}
-            as={`/detail/${id}`}
           >
             <Card
               cover={<Image layout="fill" alt="food-thumnail" src={thumb} />}

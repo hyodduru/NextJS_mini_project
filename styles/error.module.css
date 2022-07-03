@@ -1,0 +1,13 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error div {
+  height: 0px;
+}
+
+.error h1 {
+  font-weight: bold;
+}

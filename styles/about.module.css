@@ -8,4 +8,35 @@
 .subtitle {
   display: inline;
   font-family: "Arima", cursive;
+  color: #032ca6;
+}
+
+.line {
+  width: 98%;
+  height: 5px;
+  background-color: #032ca6;
+  margin: 10px 0;
+}
+
+.about h3 {
+  display: inline;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  font-family: "Nanum Myeongjo", serif;
+  margin: 20px 0;
+  padding: 30px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  height: 300px;
+  transform: translateX(-50%);
 }

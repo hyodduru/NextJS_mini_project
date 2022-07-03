@@ -1,9 +1,10 @@
 .footer {
+  width: 97%;
   bottom: 0px;
   margin: auto;
   height: 100px;
   padding: 60px 20px 40px 20px;
-  border-top: 2px solid #eeeeee;
+  border-top: 10px solid #eeeeee;
   z-index: 100;
 }
 

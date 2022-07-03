@@ -6,13 +6,21 @@
 }
 
 .subtitle {
-  display: inline;
   font-family: "Arima", cursive;
+  display: inline;
+  color: #032ca6;
+}
+
+.line {
+  margin: 10px 0;
+  width: 98%;
+  height: 5px;
+  background-color: #032ca6;
 }
 
 .card-box {
-  padding: 20px 0;
   display: grid;
+  padding: 20px 0;
   grid-template-columns: repeat(5, 1fr);
   height: 430px;
 }

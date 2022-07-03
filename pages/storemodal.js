@@ -1,11 +1,11 @@
 import React from "react";
-import { Modal } from "antd";
+import useSWR from "swr";
+import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Modal } from "antd";
 import modal from "../styles/modal.module.css";
-import useSWR from "swr";
 import { BASE_URL } from "../config";
-import Link from "next/link";
 
 const StoreModal = () => {
   const router = useRouter();
@@ -28,8 +28,8 @@ const StoreModal = () => {
     >
       <div className={modal.contents}>
         <Image
-          src={data?.image || "/image/default/png"}
-          alt="main-image"
+          src={data?.image || "/image/default.png"}
+          alt="main"
           width="400"
           height="640"
         />
