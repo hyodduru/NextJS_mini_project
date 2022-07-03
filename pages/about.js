@@ -15,14 +15,14 @@ const About = () => {
         Awesome Food Store에서는, 여러분들의 퀄리티 있는 식사를 약속드립니다.
         <br />
         이왕이면 소중한 한 끼를 스스로에게 선물해보아요.
-      </div>
-      <div className={about["image-wrapper"]}>
-        <Image
-          src="/image/restaurant.jpg"
-          width="600"
-          height="400"
-          alt="about"
-        />
+        <div className={about["image-wrapper"]}>
+          <Image
+            src="/image/restaurant.jpg"
+            width="600"
+            height="400"
+            alt="about"
+          />
+        </div>
       </div>
     </div>
   );

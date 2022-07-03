@@ -4,7 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Modal } from "antd";
+
 import modal from "../styles/modal.module.css";
+
 import { BASE_URL } from "../config";
 
 const StoreModal = () => {
@@ -12,7 +14,7 @@ const StoreModal = () => {
   const { id } = router.query;
 
   const closeModal = () => {
-    router.push({ query: null });
+    router.replace("/");
   };
 
   const { data } = useSWR(id ? `${BASE_URL}/stores/${id}` : null);
@@ -24,6 +26,7 @@ const StoreModal = () => {
       visible={!!id}
       onCancel={closeModal}
       centered
+      maskClosable={false}
       footer={null}
     >
       <div className={modal.contents}>

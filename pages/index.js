@@ -2,7 +2,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Card } from "antd";
 import StoreModal from "./storemodal";
+
 import home from "../styles/home.module.css";
+
 import { BASE_URL } from "../config";
 
 export default function Home({ stores }) {
@@ -33,7 +35,7 @@ export default function Home({ stores }) {
             <Card
               cover={<Image layout="fill" alt="food-thumnail" src={thumb} />}
               hoverable
-            ></Card>
+            />
           </div>
         ))}
       </div>

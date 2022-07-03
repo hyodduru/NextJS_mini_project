@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+
 import header from "../styles/header.module.css";
 
 const Header = () => {
@@ -8,7 +9,7 @@ const Header = () => {
       <h1 className={header.title}>
         AWESOME <br /> FOOD STORE
       </h1>
-      <ul className={header["menu-list"]}>
+      <ul mode="horizontal" className={header["menu-list"]}>
         <li className={header["menu-item"]}>
           <Link href="/about">
             <a className={header["menu-name"]}>ABOUT</a>
