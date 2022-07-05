@@ -9,7 +9,7 @@ const Header = () => {
       <h1 className={header.title}>
         AWESOME <br /> FOOD STORE
       </h1>
-      <ul mode="horizontal" className={header["menu-list"]}>
+      <ul className={header["menu-list"]}>
         <li className={header["menu-item"]}>
           <Link href="/about">
             <a className={header["menu-name"]}>ABOUT</a>
