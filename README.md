@@ -1,0 +1,1 @@
+# NextJS_mini_project
