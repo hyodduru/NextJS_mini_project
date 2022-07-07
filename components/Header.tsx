@@ -1,23 +1,21 @@
 import React from "react";
 import Link from "next/link";
 
-import header from "../styles/header.module.css";
-
 const Header = () => {
   return (
-    <nav className={header.nav}>
-      <h1 className={header.title}>
+    <nav className="fixed top-0 left-0 py-5 px-0 w-full h-24 bg-white opacity-95 z-40">
+      <h1 className="font-Arima absolute top-4 right-8 text-center text-blue-900 font-10 text-2xl">
         AWESOME <br /> FOOD STORE
       </h1>
-      <ul className={header["menu-list"]}>
-        <li className={header["menu-item"]}>
+      <ul className="flex translate-y-3">
+        <li className="list-none">
           <Link href="/about">
-            <a className={header["menu-name"]}>ABOUT</a>
+            <a className="text-black font-bold text-base mx-10 my-0">ABOUT</a>
           </Link>
         </li>
-        <li className={header["menu-item"]}>
+        <li className="list-none">
           <Link href="/">
-            <a className={header["menu-name"]}>STORE</a>
+            <a className="text-black font-bold text-base mx-10 my-0">STORE</a>
           </Link>
         </li>
       </ul>

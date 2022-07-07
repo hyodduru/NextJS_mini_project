@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Modal } from "antd";
 
-import modal from "../styles/modal.module.css";
-
 import { BASE_URL } from "../config";
 
 const StoreModal = () => {
@@ -22,27 +20,28 @@ const StoreModal = () => {
   return (
     <Modal
       width="1000px"
-      className={modal.modal}
       visible={!!id}
       onCancel={closeModal}
       centered
       maskClosable={false}
       footer={null}
     >
-      <div className={modal.contents}>
+      <div className="flex">
         <Image
           src={data?.image || "/image/default.png"}
           alt="main"
           width="400"
           height="640"
         />
-        <div className={modal.info}>
-          <h1 className={modal.title}> {data?.name.toUpperCase()}</h1>
-          <div className={modal.description}>{data?.description}</div>
+        <div className="relative flex-1 py-10 px-20 whitespace-pre-line">
+          <h1 className="font-Nanum inline font-bold text-xl">
+            {data?.name.toUpperCase()}
+          </h1>
+          <div className="my-5 mx-0 leading-6">{data?.description}</div>
           {data?.url && (
             <Link href={data.url} passHref>
               <a
-                className={modal.url}
+                className="absolute left-10 top-[90%] text-black font-semibold"
                 target="_blank "
                 rel="noreferrer noopener"
               >
