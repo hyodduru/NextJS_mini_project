@@ -3,33 +3,38 @@ import Image from "next/image";
 import { Card } from "antd";
 import StoreModal from "./storemodal";
 
-import home from "../styles/home.module.css";
-
 import { BASE_URL } from "../config";
 
-export default function Home({ stores }) {
+interface Props {
+  stores: {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    thumb: string;
+    url: string;
+  }[];
+}
+
+export default function Home({ stores }: Props) {
   const router = useRouter();
   const { id } = router.query;
 
-  const openModal = (id) => {
+  const openModal = (id: number) => {
     router.replace({ query: { id } });
   };
 
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div className={home.home}>
+    <div className="mx-auto mt-28 mb-0 py-0 px-4 max-w-5xl">
       {id && <StoreModal />}
 
-      <h1 className={home.subtitle}>STORE</h1>
-      <div className={home.line}></div>
-      <div className={home["card-box"]}>
+      <h1 className="inline font-Arima text-3xl text-blue-900">STORE</h1>
+      <div className="my-2 mx-0  h-1 bg-blue-900"></div>
+      <div className="py-5 px-0 h-[27rem] grid grid-cols-4 lg:grid-cols-5 w-[800px] lg:w-full mx-auto">
         {stores.map(({ id, thumb }) => (
           <div
             key={id}
-            className={home["card-wrapper"]}
+            className="w-48 h-48 rounded-[8px] overflow-hidden"
             onClick={() => openModal(id)}
           >
             <Card

@@ -1,19 +1,22 @@
 import React from "react";
 import Head from "next/head";
 
-const HeadInfo = ({ title, keyword, contents }) => {
+interface Props {
+  title: string;
+  contents: string;
+}
+
+const HeadInfo = ({ title, contents }: Props) => {
   return (
     <Head>
       <title>{title}</title>
-      <meta keyword={keyword} />
-      <meta contents={contents} />
+      <meta content={contents} />
     </Head>
   );
 };
 
 HeadInfo.defaultProps = {
   title: "Awesome Food Store",
-  keyword: "Awesome food store by next.js ",
   contents: "Awesome food store by next.js ",
 };
 
